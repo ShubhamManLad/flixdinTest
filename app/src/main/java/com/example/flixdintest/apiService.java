@@ -2,9 +2,11 @@ package com.example.flixdintest;
 
 import com.example.flixdintest.Model.ApplicantCall;
 import com.example.flixdintest.Model.ConnectionCall;
+import com.example.flixdintest.Model.Flix;
 import com.example.flixdintest.Model.Post;
 import com.example.flixdintest.Model.PostLikeCall;
 import com.example.flixdintest.Model.RequestCall;
+import com.example.flixdintest.Model.RequestFlix;
 
 import java.util.List;
 
@@ -37,6 +39,9 @@ public interface apiService {
 
     @PUT("dislike-post")
     Call<List<String>> dislikePost(@Body PostLikeCall postLikeCall);
+
+    @POST("get-all-flix")
+    Call<List<Flix>> getAllFlixs(@Body RequestFlix requestFlix);
 
 
     // Version 2 routes
